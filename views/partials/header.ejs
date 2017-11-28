@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="YelpCamp is a hands-on project from the Udemy course: The Web Developer Bootcamp by Colt Steele">
+  <title>YelpCamp</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">YelpCamp</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="<%= typeof page !== 'undefined' && page === 'campgrounds' ? 'active' : '' %>"><a href="/campgrounds">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if (!currentUser) { %>
+            <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a href="/login">Login</a></li>
+            <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a href="/register">Sign Up</a></li>
+          <% } else { %>
+            <% if (currentUser.isAdmin) { %>
+              <li><a href="/users/<%= currentUser._id %>">Admin. <%= currentUser.username %></a></li>
+            <% } else { %>
+            <li><a href="/users/<%= currentUser._id %>">Hi, <%= currentUser.username %></a></li>
+            <% } %>
+            <li><a href="/logout">Logout</a></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <% if (error && error.length > 0) {%>
+      <div class="alert alert-danger" role="alert">
+        <%= error %>
+      </div>
+    <% } %>
+    <% if (success && success.length > 0) {%>
+      <div class="alert alert-success" role="alert">
+        <%= success %>
+      </div>
+    <% } %>
+  </div>
+  <div class="container">
+  

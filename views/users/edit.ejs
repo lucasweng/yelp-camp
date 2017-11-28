@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+<div class="row">
+  <h1 style="text-align: center;">Edit Profile</h1>
+  <div class="rwd-form">
+    <form action="/users/<%= user._id %>?_method=PUT" method="POST">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input class="form-control" type="text" name="user[username]" value="<%= user.username %>" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="avatar">Profile Photo</label>
+        <input class="form-control" type="text" name="user[avatar]" value="<%= user.avatar %>" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input class="form-control" type="text" name="user[firstName]" value="<%= user.firstName %>" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input class="form-control" type="text" name="user[lastName]" value="<%= user.lastName %>" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="email" name="user[email]" value="<%= user.email %>" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-md btn-primary btn-block">Update Profile</button>
+      </div>
+    </form>
+    
+    <a href="/users/<%= user._id %>">Back</a>
+  </div>
+</div>
+<% include ../partials/footer %>

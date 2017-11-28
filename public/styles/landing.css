@@ -1,0 +1,113 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  padding-top: 40vh;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+#landing-header h1 {
+  color: #fff;
+  margin: 0.5em auto;
+}
+
+.entryLink {
+  color: #fff;
+  opacity: 1;
+}
+
+.entryLink:hover {
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.entryLink:focus {
+  color: #fff;
+  opacity: 0.8;
+  outline: 0;
+  text-decoration: none;
+}
+
+.entryLink:visited {
+  color: #fff;
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* background slide show */
+.slideshow { 
+  height: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.slideshow li { 
+  animation: imageAnimation 50s linear 4s infinite; 
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(1);
+  width: 100%;
+  z-index: 0;
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(http://i.imgur.com/K3mPv14.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(http://i.imgur.com/emvhOnb.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0%, 40% { 
+    animation-timing-function: ease-in;
+    opacity: 0; 
+    transform: scale(1);
+  }
+  10% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  30% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}

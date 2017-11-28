@@ -1,0 +1,43 @@
+<% include ./partials/header %>
+<div class="row">
+  <h1 style="text-align: center">Sign Up</h1>
+  <div class="rwd-form">
+    <form action="/register" method="post">
+      <div class="form-group">
+        <label for="username">User Name</label>
+        <input class="form-control" type="text" name="username" placeholder="username" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" name="password" placeholder="password" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input class="form-control" type="text" name="firstName" placeholder="first name" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input class="form-control" type="text" name="lastName" placeholder="last name" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="username">Email</label>
+        <input class="form-control" type="email" name="email" placeholder="name@yelpcamp.com" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="avatar">Profile Photo</label>
+        <input class="form-control" type="text" name="avatar" placeholder="avatar url" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-md btn-primary btn-block">Sign Up!</button>
+      </div>
+      <hr>
+      <a href="/campgrounds">Back</a>
+      <hr>
+      <div class="form-group">
+        <label for="adminCode">Admin Code</label>
+        <input class="form-control" type="password" name="adminCode" placeholder="Admins Only" autocomplete="off" />
+      </div>
+    </form>
+  </div>
+</div>
+<% include ./partials/footer %>

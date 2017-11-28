@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+  <div class="row">
+    <div class="col-md-4">
+      <h2><%= user.firstName + " " + user.lastName %></h2>
+      <div class="thumbnail">
+        <img src="<%= user.avatar %>" alt="user profile image">
+        <div class="caption"><a href="mailto:<%= user.email %>"><%= user.email %></a></div>
+      </div>
+    </div>
+    <div class="col-md-8">
+        <h3><%= user.username %>'s campgrounds</h3>
+        <% campgrounds.forEach(campground => { %>
+          <div class="col-md-4 col-sm-6">
+            <div class="thumbnail">
+              <img src="<%= campground.image.url %>" alt="<%= campground.name %>">
+              <div class="caption">
+                <h4 class="caption"><a href="/campgrounds/<%= campground.id %>"><%= campground.name %></a></h4>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </ul>
+    </div>
+    <a href="/users/<%= user._id%>/edit">Edit Profile</a>
+  </div>
+<% include ../partials/footer %>

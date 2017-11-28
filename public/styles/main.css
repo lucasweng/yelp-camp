@@ -1,0 +1,68 @@
+body {
+  padding-top: 70px;
+}
+
+/* text link styling */
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+/* image stying */
+.thumbnail img {
+  width: 100%;
+}
+
+.thumbnail {
+  padding: 0;
+}
+
+/* tent logo */
+span.align-bottom {
+  vertical-align: bottom;
+}
+
+
+/* login, register, reset form style */
+.rwd-form {
+ margin: 25px auto;
+ width: 90%;
+}
+
+@media (min-width: 600px) {
+  .rwd-form {
+    width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .rwd-form {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .rwd-form {
+    width: 30%;
+  }
+}
+
+/* delete button */
+.delete-form {
+  display: inline;
+}
+
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
+

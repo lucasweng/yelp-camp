@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+  <header class="jumbotron">
+    <h1><span class="glyphicon glyphicon-tent align-bottom" aria-hidden="true"></span> Welcome to YelpCamp!</h1>
+    <p>View our hand-picked campgrounds around the world</p>
+    <form class="form-inline" action="/campgrounds" method="GET">
+      <div class="form-group has-feedback">
+        <label for="search"></label>
+        <input class="form-control" type="text" name="search" placeholder="Search campgrounds" autocomplete="off" />
+        <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+      </div>
+    </form>
+    <hr>
+    <a class="pull-right" href="/campgrounds/new">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      Share New Campground
+    </a>
+  </header>
+
+  <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+    <% if (noMatch !== null) {%>  
+      <div class="col-md-12">
+        <h4><%= noMatch %></h4>
+      </div>
+    <% } %>
+    <% campgrounds.forEach(campground => {%>
+      <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="<%= campground.image.url %>" alt="<%= campground.name %>" />
+          <div class="caption">
+            <h4 class="caption"><%= campground.name %></h4>
+          </div>
+          <p>
+            <a class="btn btn-primary btn-sm" href="/campgrounds/<%= campground._id %>">
+              More Info
+            </a>
+          </p>
+        </div>
+      </div>
+    <% })%>
+  </div>
+<% include ../partials/footer %>

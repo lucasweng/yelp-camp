@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+<div class="row">
+  <h1 style="text-align: center;">Create a New Campground</h1>
+  <div class="rwd-form">
+    <form action="/campgrounds" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" type="text" name="name" placeholder="Yosemite" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="image">Image</label>
+        <input id="image" type="file" name="image" accept="image/*" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input class="form-control" type="number" name="price" placeholder="9.99" min="0.01" step="0.01" autocomplete="off" required />
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input class="form-control" type="text" name="location" id="location" placeholder="Yosemite National Park, CA" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input class="form-control" type="text" name="description" placeholder="California’s Sierra Nevada mountains." autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-md btn-primary btn-block">Submit!</button>
+      </div>
+    </form>
+    
+    <a href="/campgrounds">Back</a>
+  </div>
+</div>
+<% include ../partials/footer %>

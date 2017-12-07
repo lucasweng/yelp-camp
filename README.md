@@ -55,7 +55,7 @@ To see the app in action, go to [https://yelpcamp--demo.herokuapp.com/](https://
 ### Clone or download this repository
 
 ```sh
-git clone https://github.com/lucasweng/travel-site.git
+git clone https://github.com/lucasweng/yelp-camp.git
 ```
 
 ### Install dependencies
@@ -88,10 +88,10 @@ npm install
 * [geocoder](https://github.com/wyattdanger/geocoder#geocoder)
 * [connect-flash](https://github.com/jaredhanson/connect-flash#connect-flash)
 
-### Platform
+### Platforms
 
 * [Cloudinary](https://cloudinary.com/)
-
+* [Heroku](https://www.heroku.com/)
 ## License
 
 #### [MIT](./LICENSE)

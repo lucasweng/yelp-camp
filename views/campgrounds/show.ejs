@@ -67,12 +67,7 @@
         <div class="row">
           <div class="col-md-12">
             <strong>
-              <!--Change the color of the username accordingly-->
-              <% if (currentUser && currentUser._id.equals(comment.author.id)) { %>
-                <span style="color: #0d98d8;"><%= comment.author.username %></span>
-              <% } else { %>
-                <%= comment.author.username %>
-              <% } %>
+                <a href="/users/<%= comment.author.id %>"><%= comment.author.username %></a>
             </strong>
             <span class="pull-right"><%= moment(comment.createdAt).fromNow() %></span>
             <p>

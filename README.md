@@ -42,7 +42,7 @@ To see the app in action, go to [https://yelpcamp--demo.herokuapp.com/](https://
 
 * Responsive web design
 
-### Custom Enhancement
+### Custom Enhancements
 
 * Update campground photos when editing campgrounds
 
@@ -92,6 +92,7 @@ npm install
 
 * [Cloudinary](https://cloudinary.com/)
 * [Heroku](https://www.heroku.com/)
+* [Cloud9](https://aws.amazon.com/cloud9/?origin=c9io)
 ## License
 
 #### [MIT](./LICENSE)

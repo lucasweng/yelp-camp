@@ -4,15 +4,6 @@ const express    = require("express"),
       Comment    = require("../models/comment"),
       middleware = require("../middleware");
 
-// comments New
-router.get("/new", middleware.isLoggedIn, (req, res) => {
-  //find campground by id
-  Campground.findById(req.params.id, (err, campground) => {
-    if (err) { console.log(err); }
-    else { res.render("comments/new", { campground }); }
-  });
-});
-
 // comments Create
 router.post("/", middleware.isLoggedIn, (req, res) => {
   //lookup campground using id
@@ -42,23 +33,6 @@ router.post("/", middleware.isLoggedIn, (req, res) => {
         }
       });
     }
-  });
-});
-
-
-// comment Edit
-router.get("/:comment_id/edit", middleware.checkCommentOwenership, (req, res) => {
-  Campground.findById(req.params.id, (err, foundCampground) => {
-    if (err) {
-      req.flash("error", "No campground found");
-      return res.redirect("back");
-    }
-    Comment.findById(req.params.comment_id, (err, foundComment) => {
-      if (err) { res.redirect("back"); }
-      else {
-        res.render("comments/edit", { campground_id: req.params.id, comment: foundComment });
-      }
-    });
   });
 });
 

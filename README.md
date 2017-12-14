@@ -1,5 +1,8 @@
 # YelpCamp
 
+[![Known Vulnerabilities](https://snyk.io/test/github/lucasweng/yelp-camp/badge.svg)](https://snyk.io/test/github/lucasweng/yelp-camp)
+[![NSP Status](https://nodesecurity.io/orgs/webdevprojects/projects/e3247e54-2256-44ff-9c8a-e4e087bd49fa/badge)](https://nodesecurity.io/orgs/webdevprojects/projects/e3247e54-2256-44ff-9c8a-e4e087bd49fa)
+
 > A Node.js web application project from the Udemy course - [The Web Developer Bootcamp by Colt Steele](https://www.udemy.com/the-web-developer-bootcamp/)
 
 ## Live Demo
@@ -64,9 +67,15 @@ git clone https://github.com/lucasweng/yelp-camp.git
 npm install
 ```
 
+or
+
+```sh
+yarn install
+```
+
 ### Comments in code
 
-Some comments in the source code are course notes and therefore might seem unnecessary from a developer's point of view.
+Some comments in the source code are course notes and therefore might not seem necessary from a developer's point of view.
 
 ## Built with
 

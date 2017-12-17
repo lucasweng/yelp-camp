@@ -51,6 +51,8 @@ To see the app in action, go to [https://yelpcamp--demo.herokuapp.com/](https://
 
 * Update personal information on profile page
 
+* Improve image load time on the landing page using Cloudinary
+ 
 ## Getting Started
 
 > This app contains API secrets and passwords that have been hidden deliberately, so the app cannot be run with its features on your local machine. However, feel free to clone this repository if necessary.

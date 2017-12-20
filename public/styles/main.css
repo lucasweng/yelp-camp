@@ -16,6 +16,23 @@ a:visited {
   text-decoration: none;
 }
 
+/* campground cards */
+.card {
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  transition: box-shadow 200ms cubic-bezier(0.4,0.0,0.2,1);
+}
+
+.card:hover {
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+/* campground cards button */
+.btn-b-mg {
+  margin-bottom: 20px;
+}
+
 /* image stying */
 .thumbnail img {
   width: 100%;
@@ -26,7 +43,7 @@ a:visited {
 }
 
 /* tent logo */
-span.align-bottom {
+span .align-bottom {
   vertical-align: bottom;
 }
 

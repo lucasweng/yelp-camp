@@ -11,7 +11,7 @@
         <h3><%= user.username %>'s campgrounds</h3>
         <% campgrounds.forEach(campground => { %>
           <div class="col-md-4 col-sm-6">
-            <div class="thumbnail">
+            <div class="thumbnail card">
               <img src="<%= campground.image.url %>" alt="<%= campground.name %>">
               <div class="caption">
                 <h4 class="caption"><a href="/campgrounds/<%= campground.id %>"><%= campground.name %></a></h4>

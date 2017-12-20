@@ -24,13 +24,13 @@
     <% } %>
     <% campgrounds.forEach(campground => {%>
       <div class="col-md-3 col-sm-6">
-        <div class="thumbnail">
+        <div class="thumbnail card">
           <img src="<%= campground.image.url %>" alt="<%= campground.name %>" />
           <div class="caption">
             <h4 class="caption"><%= campground.name %></h4>
           </div>
           <p>
-            <a class="btn btn-primary btn-sm" href="/campgrounds/<%= campground._id %>">
+            <a class="btn btn-primary btn-sm btn-b-mg" href="/campgrounds/<%= campground._id %>">
               More Info
             </a>
           </p>

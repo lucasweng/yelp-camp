@@ -52,6 +52,8 @@ To see the app in action, go to [https://yelpcamp--demo.herokuapp.com/](https://
 * Update personal information on profile page
 
 * Improve image load time on the landing page using Cloudinary
+
+* Use Helmet to strengthen security
  
 ## Getting Started
 
@@ -93,6 +95,8 @@ Some comments in the source code are course notes and therefore might not seem n
 * [mongoDB](https://www.mongodb.com/)
 * [mongoose](http://mongoosejs.com/)
 * [async](http://caolan.github.io/async/)
+* [crypto](https://nodejs.org/api/crypto.html#crypto_crypto)
+* [helmet](https://helmetjs.github.io/)
 * [passport](http://www.passportjs.org/)
 * [passport-local](https://github.com/jaredhanson/passport-local#passport-local)
 * [express-session](https://github.com/expressjs/session#express-session)

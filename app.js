@@ -2,6 +2,7 @@ const express        = require("express"),
       app            = express(),
       bodyParser     = require("body-parser"),
       mongoose       = require("mongoose"),
+      helmet         = require("helmet"),
       flash          = require("connect-flash"),
       session        = require("express-session"),
       moment         = require("moment"),
@@ -22,6 +23,7 @@ let url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v13"; // fal
 mongoose.connect(url, {useMongoClient: true});
 
 app.set("view engine", "ejs");
+app.use(helmet());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));

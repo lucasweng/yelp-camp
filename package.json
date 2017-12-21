@@ -18,6 +18,7 @@
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "geocoder": "^0.2.3",
+    "helmet": "^3.9.0",
     "method-override": "^2.3.10",
     "moment": "^2.19.2",
     "mongoose": "^4.13.0",

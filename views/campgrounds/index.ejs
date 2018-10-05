@@ -17,7 +17,7 @@
   </header>
 
   <div class="row text-center" style="display: flex; flex-wrap: wrap;">
-    <% if (noMatch !== null) {%>  
+    <% if (noMatch !== null) {%>
       <div class="col-md-12">
         <h4><%= noMatch %></h4>
       </div>
@@ -25,7 +25,7 @@
     <% campgrounds.forEach(campground => {%>
       <div class="col-md-3 col-sm-6">
         <div class="thumbnail card">
-          <img src="<%= campground.image.url %>" alt="<%= campground.name %>" />
+          <img class="campground__image" data-src="<%= campground.image.url %>" alt="<%= campground.name %>" />
           <div class="caption">
             <h4 class="caption"><%= campground.name %></h4>
           </div>

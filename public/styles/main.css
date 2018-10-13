@@ -36,12 +36,21 @@ a:visited {
 /* image stying */
 .thumbnail img {
   width: 100%;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.thumbnail img[data-src] {
+  opacity: 0;
 }
 
 .thumbnail {
   padding: 0;
 }
 
+.campground__image {
+  height: 150px;
+}
 /* tent logo */
 span .align-bottom {
   vertical-align: bottom;
@@ -82,4 +91,3 @@ span .align-bottom {
     height: 400px;
     width: 100%;
 }
-
